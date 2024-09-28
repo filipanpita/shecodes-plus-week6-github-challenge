@@ -8,11 +8,8 @@ function displayWeather(response) {
   let windSpeed = Math.round(response.data.wind.speed);
 
   temperatureElement.innerHTML = temperature;
-  weatherDescriptionElement.innerHTML = `
-    ${formatDate(new Date())}, ${description} <br />
-    Humidity: <strong>${humidity}%</strong>, Wind: <strong>${windSpeed} km/h</strong>
-  `;
-}
+  weatherDescriptionElement.innerHTML = `${formatDate(new Date())}, ${description} <br />
+    Humidity: <strong>${humidity}%</strong>, Wind: <strong>${windSpeed} km/h</strong>`;}
 
 function search(event) {
   event.preventDefault();
